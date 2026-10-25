@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  overscroll-behavior-y: none;
+}
+
+/* Hide scrollbars on horizontal filter rows */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Volume slider */
+input[type='range'].vlib-volume {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.25);
+  outline: none;
+  cursor: pointer;
+}
+input[type='range'].vlib-volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+  background: #fff;
+}
+input[type='range'].vlib-volume::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 9999px;
+  background: #fff;
+}
+
+/* Seek bar (custom-styled range input over the timeline) */
+input[type='range'].vlib-seek {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  cursor: pointer;
+  margin: 0;
+}
+input[type='range'].vlib-seek::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.35);
+}
+input[type='range'].vlib-seek::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: none;
+  border-radius: 9999px;
+  background: #fff;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.35);
+}
+input[type='range'].vlib-seek:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}

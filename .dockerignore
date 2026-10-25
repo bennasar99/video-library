@@ -1,0 +1,15 @@
+node_modules
+.next
+.git
+.gitignore
+Dockerfile
+docker-compose*
+compose.yaml
+.env
+.env.*
+data
+data-test
+media
+media-test
+*.zip
+npm-debug.log*
